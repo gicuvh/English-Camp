@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moldova English Camp</title>
+
+  <!-- Stiluri -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header id="home" class="hero-header">
+    <nav class="nav">
+      <div class="logo">Moldova English Camp</div>
+      <ul class="nav-links">
+        <li><a href="#about">Despre</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#what-to-bring">Ce să aduci</a></li>
+        <li><a href="#testimonials">Testimoniale</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="location.href='#contact'">Înscrie-te</button>
+      <button
+        class="nav-toggle"
+        aria-label="open menu"
+        onclick="document.body.classList.toggle('menu-open')"
+      >
+        ☰
+      </button>
+    </nav>
+
+    <div class="hero-content" data-aos="fade-up">
+      <h1>
+        Bine ai venit la <span>Moldova English Camp</span>
+      </h1>
+      <p>
+        Improvizează, învață engleza vorbind — în natură, cu activități interactive
+        și prieteni noi.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Înscrie-te acum</a>
+        <a class="btn ghost" href="#about">Află mai multe</a>
+      </div>
+
+      <div class="countdown" id="countdown" aria-live="polite" data-aos="zoom-in">
+        <div>
+          <span id="cd-days">00</span><small>zile</small>
+        </div>
+        <div>
+          <span id="cd-hours">00</span><small>ore</small>
+        </div>
+        <div>
+          <span id="cd-mins">00</span><small>min</small>
+        </div>
+        <div>
+          <span id="cd-secs">00</span><small>sec</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container" data-aos="fade-right">
+      <h2>Despre tabără</h2>
+      <p>
+        Moldova English Camp este o tabără de vară pentru tineri (12–18 ani) dedicată
+        dezvoltării competențelor de comunicare în limba engleză prin activități practice,
+        jocuri de rol, ateliere creative și excursii.
+      </p>
+
+      <div class="cards">
+        <article class="card" data-aos="flip-left">
+          <h3>Obiectiv</h3>
+          <p>
+            Creșterea încrederii în vorbire, vocabular activ și abilități interculturale.
+          </p>
+        </article>
+
+        <article class="card" data-aos="flip-up">
+          <h3>Vârste</h3>
+          <p>12–18 ani — grupate pe niveluri (începător / intermediar / avansat).</p>
+        </article>
+
+        <article class="card" data-aos="flip-right">
+          <h3>Locație</h3>
+          <p>
+            În natură, la aproximativ o oră de Chișinău — cazare sigură și personal
+            calificat.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section section-alt" data-aos="fade-up">
+    <div class="container">
+      <h2>Galerie</h2>
+      <div class="gallery-grid">
+        <img src="img/photo1.jpg" alt="Activitate 1" />
+        <img src="img/photo2.jpg" alt="Activitate 2" />
+        <img src="img/photo3.jpg" alt="Foc de tabără" />
+        <img src="img/photo4.jpg" alt="Workshop" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO BRING -->
+  <section id="what-to-bring" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Ce să aduci cu tine</h2>
+      <ul class="packing-list">
+        <li>Haine confortabile și jachetă pentru seară</li>
+        <li>Încălțăminte sport + papuci</li>
+        <li>Produse personale + prosop</li>
+        <li>Protecție solară și pălărie</li>
+        <li>Sticlă reutilizabilă pentru apă</li>
+        <li>Notițe și pixuri pentru activități</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section section-alt">
+    <div class="container">
+      <h2 data-aos="fade-in">Testimoniale</h2>
+
+      <div class="testimonials" data-aos="fade-up">
+        <div class="testi active">
+          <blockquote>
+            „Am învățat mai mult vorbind decât în toți anii de școală — și m-am făcut prieteni
+            pe viață!”
+          </blockquote>
+          <cite>— Maria, 16 ani</cite>
+        </div>
+
+        <div class="testi">
+          <blockquote>
+            „Programul e foarte bine structurat, profesorii sunt implicați, atmosfera e
+            prietenoasă.”
+          </blockquote>
+          <cite>— Ion, 17 ani</cite>
+        </div>
+
+        <div class="testi">
+          <blockquote>
+            „Recomand părinților — siguranță, activități educative și multă distracție.”
+          </blockquote>
+          <cite>— Ana, părinte</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO / SPONSORS -->
+  <section class="section">
+    <div class="container" data-aos="fade-up">
+      <div class="two-col">
+        <div>
+          <h3>Video de prezentare</h3>
+          <div class="video-wrap">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/TubCz5THIlw"
+              title="YouTube video player"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <div>
+          <h3>Parteneri / Sponsori</h3>
+          <div class="sponsors">
+            <img src="img/sponsor1.png" alt="sponsor 1" />
+            <img src="img/sponsor2.png" alt="sponsor 2" />
+            <img src="img/sponsor3.png" alt="sponsor 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section-alt">
+    <div class="container" data-aos="fade-up">
+      <h2>Întrebări frecvente</h2>
+
+      <div class="faq-grid">
+        <details>
+          <summary>Ce vârstă pot avea participanții?</summary>
+          <p>Tabăra este pentru participanți între 12 și 18 ani. Grupăm pe niveluri de engleză.</p>
+        </details>
+
+        <details>
+          <summary>Ce este inclus în preț?</summary>
+          <p>
+            Cazare, trei mese/zi, activități, materiale pentru ateliere și transport (dacă este
+            menționat în ofertă).
+          </p>
+        </details>
+
+        <details>
+          <summary>Cum se face înscrierea?</summary>
+          <p>
+            Completezi formularul de contact / înscriere din secțiunea Contact. Primești
+            confirmare prin email sau telefon.
+          </p>
+        </details>
+
+        <details>
+          <summary>Există supraveghere medicală?</summary>
+          <p>Da — există personal instruit și acces la servicii medicale în zonă.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Înscriere & Contact</h2>
+
+      <div class="contact-wrap">
+        <form
+          action="https://formspree.io/f/tu-form-id"
+          method="POST"
+          class="contact-form"
+        >
+          <div class="row">
+            <input type="text" name="name" placeholder="Nume complet" required />
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+
+          <div class="row">
+            <input type="tel" name="phone" placeholder="Telefon" required />
+            <input type="text" name="age" placeholder="Vârstă" required />
+          </div>
+
+          <textarea name="message" placeholder="Mesaj (opțional)"></textarea>
+          <button class="btn" type="submit">Trimite înscriere</button>
+        </form>
+
+        <aside class="contact-aside">
+          <h3>Date de contact</h3>
+          <p><strong>Email:</strong> contact@moldovaenglishcamp.md</p>
+          <p><strong>Telefon:</strong> +373 68 XXX XXX</p>
+
+          <h3>Locație</h3>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.862002442257!2d28.312361915486275!3d47.6362449791871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c9a7a3953796d1%3A0x40ed374a1f19a8d0!2s34F9%2B72%20B%C4%83l%C4%83b%C4%83ne%C8%99ti%2C%20Moldova!5e0!3m2!1sro!2s!4v1691851058921!5m2!1sro!2s"
+              width="100%"
+              height="220"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Moldova English Camp — Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating -->
+  <a
+    class="whatsapp-fab"
+    href="https://wa.me/37300000000?text=Salut!%20Am%20o%20întrebare%20despre%20Moldova%20English%20Camp."
+    target="_blank"
+    aria-label="Contact WhatsApp"
+    >💬</a
+  >
+
+  <!-- Scripturi -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
