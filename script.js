@@ -68,3 +68,13 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 // Update footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+// Animatie la scroll pentru leaders
+document.addEventListener("scroll", () => {
+  const leaders = document.querySelectorAll(".leader-card");
+  leaders.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.classList.add("visible");
+    }
+  });
+});

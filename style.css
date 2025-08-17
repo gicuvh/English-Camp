@@ -31,7 +31,7 @@ body {
       rgba(0, 183, 194, 0.55),
       rgba(0, 183, 194, 0.55)
     ),
-    url('img/fundal.jpg') center center/cover no-repeat;
+    url('img/fundal2.jpg') center center/cover no-repeat;
   color: var(--white);
   position: relative;
   padding-bottom: 30px;
@@ -512,4 +512,80 @@ details p {
   50% {
     box-shadow: 0 0 40px var(--yellow-solar);
   }
+}
+/* LEADERS SECTION */
+#leaders {
+  padding: 4rem 0;
+  background-color: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+#leaders h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.leaders-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.leader-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.leader-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.leader-card h3 {
+  margin: 0.5rem 0 0.25rem 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.leader-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+a i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+a i:hover {
+  color: #0077ff; /* sau culoarea dorită */
 }
