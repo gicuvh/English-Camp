@@ -589,3 +589,40 @@ a i {
 a i:hover {
   color: #0077ff; /* sau culoarea dorită */
 }
+#donations {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 800px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#donations h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+#donations p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.donate-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #fff;
+  color: #ff7e5f;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: #ff7e5f;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
