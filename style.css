@@ -626,3 +626,47 @@ a i:hover {
   color: #fff;
   box-shadow: 0 0 15px rgba(255,255,255,0.6);
 }
+.previous-years {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.previous-years h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff6b6b;
+}
+
+.previous-years .year {
+  margin-bottom: 40px;
+}
+
+.previous-years video {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.previous-years video:hover {
+  transform: scale(1.02);
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;   /* dimensiune maximă */
+  margin: 0 auto;
+  padding-top: 56.25%; /* raport 16:9 (9/16 = 0.5625) */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
