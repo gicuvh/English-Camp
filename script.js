@@ -5,7 +5,8 @@ AOS.init({
 });
 
 // Countdown timer
-const countdownDate = new Date('2026-07-01T10:00:00').getTime();
+// 🔹 Data finală – 18 iulie 2026, ora 10:00:00
+const countdownDate = new Date('2026-07-18T10:00:00').getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
@@ -18,9 +19,7 @@ function updateCountdown() {
   }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -61,13 +60,14 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
-      document.body.classList.remove('menu-open'); // inchide meniu mobil daca e deschis
+      document.body.classList.remove('menu-open'); // închide meniul mobil dacă e deschis
     }
   });
 });
 
 // Update footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
 // Animatie la scroll pentru leaders
 document.addEventListener("scroll", () => {
   const leaders = document.querySelectorAll(".leader-card");
