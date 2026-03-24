@@ -7,9 +7,6 @@ AOS.init({
 // Countdown timer
 // 🔹 Data finală – 18 iulie 2026, ora 10:00:00
 const countdownDate = new Date('2026-07-18T10:00:00').getTime();
-// 🔹 Data finală – 18 iulie 2026, ora 10:00:00
-const countdownDate = new Date('2026-07-18T10:00:00').getTime();
-
 function updateCountdown() {
   const now = new Date().getTime();
   const distance = countdownDate - now;
