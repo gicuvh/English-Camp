@@ -28,13 +28,6 @@
 </head>
 <body>
 
-  <!-- Buton meniu (hamburger) -->
-    <button class="nav-toggle" id="nav-toggle" aria-label="open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
   <!-- NAV -->
   <header id="home" class="hero-header">
     <nav class="nav">
@@ -130,13 +123,39 @@
     <div class="container">
       <h2>Galerie</h2>
       <div class="gallery-grid">
-        <img src="img/photo1.jpg" alt="Activitate 1" />
-        <img src="img/photo2.jpg" alt="Activitate 2" />
-        <img src="img/photo3.jpg" alt="Foc de tabără" />
-        <img src="img/photo4.jpg" alt="Workshop" />
+        <button class="gallery-item" type="button" aria-label="Vezi poza Activitate 1">
+          <img src="img/photo1.jpg" alt="Clasa de engleză" />
+        </button>
+        <button class="gallery-item" type="button" aria-label="Vezi poza Activitate 2">
+          <img src="img/photo2.jpg" alt="Activități de tabără" />
+        </button>
+        <button class="gallery-item" type="button" aria-label="Vezi poza Foc de tabără">
+          <img src="img/photo3.jpg" alt="Foc de tabără" />
+        </button>
+        <button class="gallery-item" type="button" aria-label="Vezi poza Workshop">
+          <img src="img/photo4.jpg" alt="Workshop" />
+        </button>
       </div>
+      <button class="gallery-toggle" type="button" hidden>
+        <i class="fa-solid fa-images" aria-hidden="true"></i>
+        Vezi mai multe poze
+      </button>
     </div>
   </section>
+
+  <div class="lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-label="Imagine galerie">
+    <button class="lightbox-close" type="button" aria-label="Închide imaginea">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Poza precedentă">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <img class="lightbox-image" src="" alt="" />
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Poza următoare">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+    <p class="lightbox-caption"></p>
+  </div>
 
   <!-- WHAT TO BRING -->
   <section id="what-to-bring" class="section">

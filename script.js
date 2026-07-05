@@ -65,6 +65,95 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
+// Galerie extensibilă + lightbox
+const galleryGrid = document.querySelector('.gallery-grid');
+const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+const galleryToggle = document.querySelector('.gallery-toggle');
+const lightbox = document.getElementById('gallery-lightbox');
+const lightboxImage = document.querySelector('.lightbox-image');
+const lightboxCaption = document.querySelector('.lightbox-caption');
+const lightboxClose = document.querySelector('.lightbox-close');
+const lightboxPrev = document.querySelector('.lightbox-prev');
+const lightboxNext = document.querySelector('.lightbox-next');
+let currentGalleryIndex = 0;
+
+galleryItems.forEach((item, index) => {
+  if (index >= 4) {
+    item.classList.add('is-extra');
+  }
+
+  item.addEventListener('click', () => {
+    openLightbox(index);
+  });
+});
+
+if (galleryToggle && galleryItems.length > 4) {
+  galleryToggle.hidden = false;
+  galleryToggle.addEventListener('click', () => {
+    const isExpanded = galleryGrid.classList.toggle('is-expanded');
+    galleryToggle.innerHTML = isExpanded
+      ? '<i class="fa-solid fa-compress" aria-hidden="true"></i> Vezi mai puține poze'
+      : '<i class="fa-solid fa-images" aria-hidden="true"></i> Vezi mai multe poze';
+  });
+}
+
+function openLightbox(index) {
+  currentGalleryIndex = index;
+  updateLightboxImage();
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lightbox-open');
+  lightboxClose.focus();
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lightbox-open');
+}
+
+function updateLightboxImage() {
+  const image = galleryItems[currentGalleryIndex].querySelector('img');
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
+  lightboxCaption.textContent = image.alt;
+}
+
+function showGalleryImage(direction) {
+  currentGalleryIndex = (currentGalleryIndex + direction + galleryItems.length) % galleryItems.length;
+  updateLightboxImage();
+}
+
+if (lightbox) {
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', () => showGalleryImage(-1));
+  lightboxNext.addEventListener('click', () => showGalleryImage(1));
+
+  lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (!lightbox.classList.contains('is-open')) {
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      closeLightbox();
+    }
+
+    if (event.key === 'ArrowLeft') {
+      showGalleryImage(-1);
+    }
+
+    if (event.key === 'ArrowRight') {
+      showGalleryImage(1);
+    }
+  });
+}
+
 // Update footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
