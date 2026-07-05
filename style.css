@@ -272,6 +272,17 @@ p {
   font-size: 1.1rem;
 }
 
+.consent-download {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.consent-download .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* TESTIMONIALS */
 .testimonials {
   max-width: 600px;
