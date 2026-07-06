@@ -48,8 +48,27 @@ setInterval(() => {
 
 // Nav toggle for mobile
 const navToggle = document.querySelector('.nav-toggle');
-navToggle.addEventListener('click', () => {
-  document.body.classList.toggle('menu-open');
+const navLinks = document.querySelector('.nav-links');
+
+function closeMobileMenu() {
+  document.body.classList.remove('menu-open');
+  navToggle?.setAttribute('aria-expanded', 'false');
+}
+
+navToggle?.addEventListener('click', event => {
+  event.stopPropagation();
+  const isOpen = document.body.classList.toggle('menu-open');
+  navToggle.setAttribute('aria-expanded', isOpen.toString());
+});
+
+document.addEventListener('click', event => {
+  if (
+    document.body.classList.contains('menu-open') &&
+    !navLinks?.contains(event.target) &&
+    !navToggle?.contains(event.target)
+  ) {
+    closeMobileMenu();
+  }
 });
 
 // Smooth scroll la click pe nav links
@@ -59,8 +78,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
-      document.body.classList.remove('menu-open'); // închide meniul mobil dacă e deschis
-      document.body.classList.remove('menu-open'); // închide meniul mobil dacă e deschis
+      closeMobileMenu();
     }
   });
 });

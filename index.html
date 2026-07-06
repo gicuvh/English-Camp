@@ -32,7 +32,7 @@
   <header id="home" class="hero-header">
     <nav class="nav">
       <div class="logo">Cognita</div>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="#about">Despre</a></li>
         <li><a href="#previous-years">Vezi cum a fost</a></li>
         <li><a href="#gallery">Galerie</a></li>
@@ -46,8 +46,10 @@
       <button class="nav-cta" onclick="location.href='#contact'">Înscrie-te</button>
       <button
         class="nav-toggle"
-        aria-label="open menu"
-        onclick="document.body.classList.toggle('menu-open')"
+        type="button"
+        aria-label="Deschide meniul"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
       >
         ☰
       </button>
