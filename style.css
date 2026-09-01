@@ -39,7 +39,7 @@ p { color: var(--muted); }
   color: var(--surface);
   display: flex;
   flex-direction: column;
-  background: linear-gradient(105deg, rgba(4, 43, 64, .91), rgba(6, 59, 87, .62)), url('img/fundal3.png') center / cover no-repeat;
+  background: linear-gradient(105deg, rgba(4, 43, 64, .91), rgba(6, 59, 87, .62)), url('img/scaun\ _in_\ imagine2.jpg') center / cover no-repeat;
 }
 .nav {
   position: relative;
