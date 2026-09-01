@@ -39,7 +39,7 @@ p { color: var(--muted); }
   color: var(--surface);
   display: flex;
   flex-direction: column;
-  background: linear-gradient(105deg, rgba(4, 43, 64, .91), rgba(6, 59, 87, .62)), url('img/fundal2.jpg') center / cover no-repeat;
+  background: linear-gradient(105deg, rgba(4, 43, 64, .91), rgba(6, 59, 87, .62)), url('img/fundal3.png') center / cover no-repeat;
 }
 .nav {
   position: relative;
@@ -106,6 +106,16 @@ p { color: var(--muted); }
 .gallery-grid.is-expanded .gallery-item.is-extra { display: block; }
 .gallery-toggle { display: inline-flex; align-items: center; gap: 9px; margin: 28px auto 0; padding: 11px 19px; border: 0; border-radius: 999px; background: var(--navy); color: white; cursor: pointer; font-weight: 700; }
 .gallery-toggle[hidden] { display: none; }
+.video-gallery { margin-top: 52px; }
+.video-gallery h3 { margin-bottom: 22px; color: var(--navy); text-align: center; font-size: 1.25rem; }
+.video-gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.video-item { overflow: hidden; aspect-ratio: 16 / 9; border-radius: 16px; background: var(--navy); box-shadow: 0 8px 22px rgba(6,59,87,.12); }
+.video-link { position: relative; display: block; width: 100%; height: 100%; color: white; text-decoration: none; }
+.video-link img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.video-link-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; background: linear-gradient(rgba(4,43,64,.12), rgba(4,43,64,.76)); font-weight: 700; opacity: 0; transition: opacity .25s ease; }
+.video-link-overlay i { color: #ff0033; font-size: 2.3rem; }
+.video-link:hover img, .video-link:focus-visible img { transform: scale(1.06); }
+.video-link:hover .video-link-overlay, .video-link:focus-visible .video-link-overlay { opacity: 1; }
 .lightbox { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center; padding: 70px; background: rgba(4,43,64,.94); }
 .lightbox.is-open { display: flex; }
 .lightbox-image { max-width: min(1100px, 100%); max-height: calc(100vh - 130px); border-radius: 12px; box-shadow: 0 20px 56px rgba(0,0,0,.35); }
@@ -135,6 +145,6 @@ body.lightbox-open { overflow: hidden; }
 .site-footer { padding: 36px 0; background: var(--navy-deep); text-align: center; }.site-footer p { color: rgba(255,255,255,.72); font-size: .88rem; }.social-icons { display: flex; justify-content: center; gap: 12px; margin-bottom: 16px; }.social-icons a { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid rgba(255,255,255,.23); border-radius: 50%; color: white; text-decoration: none; transition: transform .2s, background .2s; }.social-icons a:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }.whatsapp-fab { position: fixed; right: 22px; bottom: 22px; z-index: 1000; display: grid; width: 58px; height: 58px; place-items: center; border-radius: 50%; background: #25d366; color: var(--navy-deep); box-shadow: 0 10px 24px rgba(0,0,0,.18); font-size: 1.75rem; text-decoration: none; transition: transform .2s; }.whatsapp-fab:hover { transform: scale(1.08); }
 @keyframes appear { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
-@media (max-width: 940px) { .nav-links { gap: 12px; }.nav-links a { font-size: .76rem; }.gallery-grid { grid-template-columns: repeat(2, 1fr); }.cards { grid-template-columns: 1fr; max-width: 570px; margin-right: auto; margin-left: auto; } }
+@media (max-width: 940px) { .nav-links { gap: 12px; }.nav-links a { font-size: .76rem; }.gallery-grid { grid-template-columns: repeat(2, 1fr); }.video-gallery-grid { grid-template-columns: repeat(2, 1fr); }.cards { grid-template-columns: 1fr; max-width: 570px; margin-right: auto; margin-left: auto; } }
 @media (max-width: 760px) { .section { padding: 64px 0; }.nav { min-height: 64px; padding: 10px 18px; }.nav-links { position: fixed; z-index: 1101; top: 64px; right: 0; display: none; width: min(85vw, 300px); min-height: calc(100vh - 64px); padding: 24px; flex-direction: column; align-items: stretch; justify-content: flex-start; background: var(--navy-deep); box-shadow: -12px 10px 28px rgba(0,0,0,.18); }.nav-links a { display: block; padding: 10px 5px; font-size: .96rem; }.nav-links li { border-bottom: 1px solid rgba(255,255,255,.1); } body.menu-open { overflow: hidden; } body.menu-open .nav-links { display: flex; }.nav-cta { display: none; }.nav-toggle { display: block; margin-left: auto; }.hero-header { min-height: 680px; }.hero-content { padding: 56px 0 70px; }.hero-details { align-items: flex-start; flex-direction: column; max-width: 250px; text-align: left; }.hero-actions { flex-direction: column; max-width: 290px; margin-right: auto; margin-left: auto; }.countdown { gap: 8px; }.countdown div { min-width: 68px; padding: 9px 7px; }.countdown span { font-size: 1.32rem; }.gallery-item { height: auto; aspect-ratio: 4 / 3; }.donation-card { align-items: flex-start; flex-direction: column; gap: 24px; }.lightbox { padding: 62px 14px 92px; }.lightbox-prev, .lightbox-next { top: auto; bottom: 20px; }.lightbox-prev { left: calc(50% - 54px); }.lightbox-next { right: calc(50% - 54px); }.lightbox-caption { bottom: 72px; font-size: .9rem; }.whatsapp-fab { right: 16px; bottom: 16px; width: 54px; height: 54px; } }
-@media (max-width: 480px) { .container { width: min(100% - 30px, 1100px); }.gallery-grid { grid-template-columns: 1fr; }.leaders-container { grid-template-columns: repeat(2, 1fr); gap: 12px; }.leader-card h3 { font-size: .96rem; }.leader-card p { font-size: .73rem; }.countdown { flex-wrap: wrap; max-width: 220px; margin-right: auto; margin-left: auto; }.countdown div { flex: 1 1 42%; } }
+@media (max-width: 480px) { .container { width: min(100% - 30px, 1100px); }.gallery-grid, .video-gallery-grid { grid-template-columns: 1fr; }.leaders-container { grid-template-columns: repeat(2, 1fr); gap: 12px; }.leader-card h3 { font-size: .96rem; }.leader-card p { font-size: .73rem; }.countdown { flex-wrap: wrap; max-width: 220px; margin-right: auto; margin-left: auto; }.countdown div { flex: 1 1 42%; } }
